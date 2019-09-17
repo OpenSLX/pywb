@@ -7,6 +7,7 @@ collections:
     pywb:
         index_paths: ./sample_archive/cdx/
         archive_paths: ./sample_archive/warcs/
+    ia: memento+https://web.archive.org/web/
 
 # Settings for each collection
 use_js_obj_proxy: true
@@ -17,3 +18,7 @@ enable_memento: true
 # Replay content in an iframe
 framed_replay: true
 
+proxy:
+    coll: ia
+    default-timestamp: 2000-01-01T00:00:00
+    force_proxy: true

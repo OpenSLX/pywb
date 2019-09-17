@@ -31,4 +31,5 @@ EXPOSE 8080
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["uwsgi", "/uwsgi/uwsgi.ini"]
-
+COPY force-proxy.patch /
+RUN cd /usr/local/lib/python3.7/site-packages; git apply --unsafe-paths /force-proxy.patch
