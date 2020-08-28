@@ -1,3 +1,12 @@
+Emulation-as-a-Service fork of pywb
+===================================
+
+The ``proxy-ia`` branch allows to run pywb as a `transparent proxy <https://httpwg.org/specs/rfc7230.html#rfc.iref.t.2>`_ (using the patch ``force-proxy.patch``).
+In contrast to a `regular HTTP proxy server <https://httpwg.org/specs/rfc7230.html#rfc.iref.p.1>`_, a transparent proxy does not need to be configured on the individual clients. Instead, it intercepts regular connections and forwards them to some other server.
+
+The branch also contains a modified example configuration (``config.yaml``), which makes pywb run on TCP port 80 (HTTP's default port) and transparently forward all HTTP requests to the Wayback Machine requesting a configured timestamp. 
+
+
 Webrecorder pywb 2.3
 ====================
 
